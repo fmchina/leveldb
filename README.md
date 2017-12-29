@@ -1,13 +1,16 @@
 **LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.**
  @leveldb是google发布的key-value数据库，提供一个key到value的map@
  
+ 
 [![Build Status](https://travis-ci.org/google/leveldb.svg?branch=master)](https://travis-ci.org/google/leveldb)
 
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
 
 # Features
   * Keys and values are arbitrary byte arrays.@key和value都是字节数组@
+  
   * Data is stored sorted by key.@数据按key顺序存储@
+  
   * Callers can provide a custom comparison function to override the sort order.
   * The basic operations are `Put(key,value)`, `Get(key)`, `Delete(key)`.
   * Multiple changes can be made in one atomic batch.
