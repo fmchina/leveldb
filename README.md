@@ -1,6 +1,6 @@
 **LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.
 
-** leveldb是google发布的key-value数据库，提供一个key到value的map
+**Leveldb是google发布的key-value数据库，提供一个key到value的map
 
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
 google的大牛
@@ -90,7 +90,8 @@ on google/leveldb/master. This keeps the commit timeline linear and more easily 
 with the internal repository at Google. More information at GitHub's
 [About Git rebase](https://help.github.com/articles/about-git-rebase/) page.
 
-性能
+# 性能
+(非官方性能测试查看 http://bbs.codeisbook.com/thread-11-1-1.html )
 
 
 
