@@ -1,8 +1,22 @@
-**LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.**
+**LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.
 
-[![Build Status](https://travis-ci.org/google/leveldb.svg?branch=master)](https://travis-ci.org/google/leveldb)
+** leveldb是google发布的key-value数据库，提供一个key到value的map
+ 
+
 
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
+google的大牛
+
+# 特性
+  * key和value都是字节数组
+  * 数据按key顺序存储
+  * 调用者可以提供自定义的比较函数，用于覆盖默认的排序方法
+  * 最基本的操作：`Put(key,value)`, `Get(key)`, `Delete(key)`.写，读，删
+  * 可以使用一个原子批操作封装多次操作。
+  * 用户可以创建一个瞬时快照得到一致性的数据视图。
+  * 支持正向和反向迭代器。
+  * 支持数据自动压缩，是用Snappy压缩算法。
+  * 扩展性(文件系统操作)，通过虚接口，用户可以实现自己的文件操作。
 
 # Features
   * Keys and values are arbitrary byte arrays.
@@ -15,14 +29,25 @@ Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
   * Data is automatically compressed using the [Snappy compression library](http://google.github.io/snappy/).
   * External activity (file system operations etc.) is relayed through a virtual interface so users can customize the operating system interactions.
 
+# 文档
+  中文文档: http://bbs.codeisbook.com/thread-68-1-1.html
 # Documentation
   [LevelDB library documentation](https://github.com/google/leveldb/blob/master/doc/index.md) is online and bundled with the source code.
 
+# 局限性
+  * 不是一个sql数据库。没有关系数据模型，不支持sql查询,不支持索引。
+  * 同时只有一个进程可以访问一个数据库(可能是多线程的)。
+  * 库本身不支持客户端-服务端，应用需要支持这个模式需要在库上自己封装。
 
 # Limitations
   * This is not a SQL database.  It does not have a relational data model, it does not support SQL queries, and it has no support for indexes.
   * Only a single process (possibly multi-threaded) can access a particular database at a time.
   * There is no client-server support builtin to the library.  An application that needs such support will have to wrap their own server around the library.
+
+# 给leveldb工程贡献
+leveldb工程欢迎贡献，leveldb的主要目标是建立一个可靠，快的 key-value数据库，
+与此一致的更改，如上所述的特征/限制，并满足以下要求，将被考虑接受。
+
 
 # Contributing to the leveldb Project
 The leveldb project welcomes contributions. leveldb's primary goal is to be
@@ -30,7 +55,10 @@ a reliable and fast key/value store. Changes that are in line with the
 features/limitations outlined above, and meet the requirements below,
 will be considered.
 
+
 Contribution requirements:
+
+投稿要求：
 
 1. **POSIX only**. We _generally_ will only accept changes that are both
    compiled, and tested on a POSIX platform - usually Linux. Very small
