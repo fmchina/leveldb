@@ -1,5 +1,6 @@
 **LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.
-**leveldb是google发布的key-value数据库，提供一个key到value的map
+
+** leveldb是google发布的key-value数据库，提供一个key到value的map
  
 
 
@@ -33,7 +34,7 @@ google的大牛
 # Documentation
   [LevelDB library documentation](https://github.com/google/leveldb/blob/master/doc/index.md) is online and bundled with the source code.
 
-#局限性
+# 局限性
   * 不是一个sql数据库。没有关系数据模型，不支持sql查询,不支持索引。
   * 同时只有一个进程可以访问一个数据库(可能是多线程的)。
   * 库本身不支持客户端-服务端，应用需要支持这个模式需要在库上自己封装。
