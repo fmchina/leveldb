@@ -1,8 +1,6 @@
 **LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.
 
 ** leveldb是google发布的key-value数据库，提供一个key到value的map
- 
-
 
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
 google的大牛
@@ -55,10 +53,16 @@ a reliable and fast key/value store. Changes that are in line with the
 features/limitations outlined above, and meet the requirements below,
 will be considered.
 
+投稿要求：
+
+1. **POSIX only** 我们通常采纳在 POSIX平台上编译测试过的修改.(通常是Linux)
+   很小的修改有时会被采纳，但是会考虑一些例外的规则。
+
+2. **稳定 API** 我们努力保持稳定的API, 对API的修改如果没有对项目有特别好的好处可能会被拒绝。
+
+3. **测试 ** 修改的修改必须测试，或者解释为什么不需要创建新的或者修改测试。
 
 Contribution requirements:
-
-投稿要求：
 
 1. **POSIX only**. We _generally_ will only accept changes that are both
    compiled, and tested on a POSIX platform - usually Linux. Very small
@@ -72,7 +76,10 @@ Contribution requirements:
 3. **Tests**: All changes must be accompanied by a new (or changed) test, or
    a sufficient explanation as to why a new (or changed) test is not required.
 
-## Submitting a Pull Request
+## 提交一个Pull Request (合入请求)
+
+
+## Submitting a Pull Request。
 Before any pull request will be accepted the author must first sign a
 Contributor License Agreement (CLA) at https://cla.developers.google.com/.
 
@@ -82,6 +89,10 @@ your changes down to a single commit and [rebase](https://git-scm.com/docs/git-r
 on google/leveldb/master. This keeps the commit timeline linear and more easily sync'ed
 with the internal repository at Google. More information at GitHub's
 [About Git rebase](https://help.github.com/articles/about-git-rebase/) page.
+
+性能
+
+
 
 # Performance
 
