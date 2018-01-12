@@ -77,7 +77,7 @@ Contribution requirements:
    a sufficient explanation as to why a new (or changed) test is not required.
 
 ## 提交一个Pull Request (合入请求)
-
+在发起一个合入请求前，先要签署一个协议 https://cla.developers.google.com/.
 
 ## Submitting a Pull Request。
 Before any pull request will be accepted the author must first sign a
